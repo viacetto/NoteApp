@@ -10,7 +10,6 @@ export const PaletteSample = (props) => {
             <Fs className='fs-header' styling={5}>
              {props.children}
                 <span className='palette-sample' style={{
-                    border: paletteBorder,
                     background: props.background
                 }}>
                 </span>

@@ -50,7 +50,7 @@ const dark = {
         500: "linear-gradient(270deg, #141c1f, black)"
     },
     secondary: {
-        500: "#141c1f",
+        500: "#262626",
         800: 'rgb(19 19 19)',
         darkmode: function(active) {
             return active ? this[500]:"#3f3827"
@@ -58,7 +58,7 @@ const dark = {
     },
     special: {
         300: "#27313f",
-        800: "#fff"
+        800: "#7a7777"
     },
     action: {
         500: "#27313f"
