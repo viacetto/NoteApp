@@ -44,7 +44,8 @@ const StyledContainer = styled.div`
         justify-content: space-between;
     }
     .direct-container{
-        margin:2rem;
+        width: 11.1rem;
+        margin: 2rem;
     }
     .sample-btn-wrapper{
         display:flex;
@@ -62,8 +63,8 @@ export const Examples = () => {
             <Navbar />
             <Fs styling={3}>Styling Guide</Fs>
             <Fs styling={4}><FontHighlight>Form</FontHighlight></Fs>
-           <NoteForm></NoteForm>
-           <br></br>
+            <NoteForm></NoteForm>
+            <br></br>
             <Fs styling={4}><FontHighlight>Inputs</FontHighlight></Fs>
             <Input placeholder="Basic Input..."></Input>
             <br></br>
