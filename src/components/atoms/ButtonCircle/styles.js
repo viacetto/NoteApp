@@ -6,7 +6,7 @@ export const StyledButton = styled.button`
             width:  ${({ size }) => {
         switch (size) {
             case "s":
-                return '3rem'
+                return '5rem'
             default:
                 return '5rem'
 
@@ -15,7 +15,7 @@ export const StyledButton = styled.button`
             height:  ${({ size }) => {
         switch (size) {
             case "s":
-                return '3rem'
+                return '5rem'
             default:
                 return '5rem'
 
@@ -73,7 +73,7 @@ export const StyledButton = styled.button`
             font-size: ${({ size }) => {
         switch (size) {
             case "s":
-                return '2rem'
+                return '3rem'
             default:
                 return '3rem'
 
