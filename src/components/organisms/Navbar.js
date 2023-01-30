@@ -9,10 +9,10 @@ export const Navbar = () => {
     const path = window.location.pathname;
     return (
         <StyledContainer>
-            <NavbarItem className={path === "/" ? "active" : null} to="/" icon={"home"}></NavbarItem>
-            <NavbarItem className={path === "/notes" ? "active" : null} to="/notes" icon={'assignment'}></NavbarItem>
+            <NavbarItem className={path === "/NoteApp/" ? "active" : null} to="/NoteApp/" icon={"home"}></NavbarItem>
+            <NavbarItem className={path === "/NoteApp/notes" ? "active" : null} to="/NoteApp/notes" icon={'assignment'}></NavbarItem>
             {/* <NavbarItem className={path === "/settings" ? "active" : null} to="/settings" icon={"settings"}></NavbarItem> */}
-            <NavbarItem className={path === "/examples" ? "active" : null} to="/examples" icon={"token"}></NavbarItem>
+            <NavbarItem className={path === "/NoteApp/examples" ? "active" : null} to="/NoteApp/examples" icon={"token"}></NavbarItem>
             <ButtonCircle isDarkmode={true} onClick={toggleDarkMode} size="s" boxShadow="none" type={'lightbulb'}></ButtonCircle>
         </StyledContainer>
     )

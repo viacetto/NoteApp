@@ -26,15 +26,15 @@ function App() {
         <StyledContainer>
           <Router>
             <Routes>
-              <Route path="/" element={<Home />}></Route>
-              <Route path="/notes" element={<Notes />}></Route>
+              <Route path="/NoteApp/" element={<Home />}></Route>
+              <Route path="/NoteApp/notes" element={<Notes />}></Route>
               {/* <Route path="settings" element={<Settings />}></Route> */}
-              <Route path="/examples" element={<Examples />}></Route>
+              <Route path="/NoteApp/examples" element={<Examples />}></Route>
             </Routes>
           </Router>
         </StyledContainer>
       </StyledApp>
-      <div id="hide-block">s</div>
+      <div id="hide-block"></div>
     </ThemeContext.Provider>
   );
 }
