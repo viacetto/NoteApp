@@ -1,27 +1,29 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { Examples } from "./components/pages/Examples";
-import { Notes } from "./components/pages/Notes";
+import { Examples } from "./components/pages/Examples/Examples";
+import { Notes } from "./components/pages/Notes/Notes";
 import { ThemeContext } from "styled-components";
 import theme from "./components/atoms/theme";
 import { useState } from "react";
 import { StyledApp, StyledContainer } from "./styles.js";
 import './App.css'
 import { Home } from "./components/pages/Home/Home";
+
 function App() {
   const [darkmode, setDarkmode] = useState(false)
-  //--start animate darkmodeChange
-  const toggleDarkMode = () => {
-    let styleBlock= document.getElementById("hide-block").style  
-    styleBlock.display = 'block';
-    styleBlock.opacity = '1';
-    setTimeout(() => {
-      styleBlock.opacity = '0';
-      setTimeout(() => {styleBlock.display = 'none';}, 300)},300);
-    setDarkmode(!darkmode)
+  const test = () => {
+    console.log('test')
+      const divBlock = document.getElementById("hide-block")!
+      let styleBlock = divBlock.style
+      styleBlock.display = 'block';
+      styleBlock.opacity = '1';
+      setTimeout(() => {
+          styleBlock.opacity = '0';
+          setTimeout(() => { styleBlock.display = 'none'; }, 300)
+      }, 300);
+      setDarkmode(!darkmode)
   }
-  //--end animate darkmodeChange
   return (
-    <ThemeContext.Provider value={{ ...theme(darkmode), toggleDarkMode }}>
+    <ThemeContext.Provider value={{ ...theme(darkmode), test}}>
       <StyledApp >
         <StyledContainer>
           <Router>

@@ -1,0 +1,19 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [ "es5", "dom" ],
+    "module": "commonjs",
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noImplicitAny": false,
+    "rootDir": "./src",
+    "outDir": "./public",
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es6",
+    "strict": true
+  },
+}

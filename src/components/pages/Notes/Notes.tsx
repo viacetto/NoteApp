@@ -1,17 +1,14 @@
-import styled from "styled-components"
-import { ButtonCircle } from "../atoms/ButtonCircle/ButtonCircle"
-import { FontHighlight } from "../atoms/FontStyles/FontHighlight"
-import { Fs } from "../atoms/FontStyles/Hs"
-import { Navbar } from "../organisms/Navbar"
+import { ButtonCircle } from "../../atoms/ButtonCircle/ButtonCircle"
+import { FontHighlight } from "../../atoms/FontStyles/FontHighlight"
+import { Fs } from "../../atoms/FontStyles/Hs"
+import { Navbar } from "../../organisms/Navbar"
 import { useState } from "react"
-import { Note } from "../organisms/Note"
+import { Note } from "../../organisms/Note"
 import { useSelector } from "react-redux"
-import { selectNotes } from "../../reducers/notes"
-import { NoteForm } from "../molecules/NoteForm/NoteForm"
-const StyledWrapper = styled.div`
-display:flex;
-justify-content: space-between
-`
+import { selectNotes } from "../../../reducers/notes"
+import { NoteForm } from "../../molecules/NoteForm/NoteForm"
+import { StyledWrapper } from "./styles"
+
 export const Notes = () => {
     const notes  = useSelector(selectNotes)
 

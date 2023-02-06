@@ -1,4 +1,3 @@
-import { useSelector } from "react-redux";
 export const selectNotes  = (state) => state.notes
 export const notes = (
     state = [
