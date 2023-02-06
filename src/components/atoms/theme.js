@@ -1,13 +1,11 @@
-import { ColorOptions, ThemeOptions } from "./themeInterface"
-
-const light: ColorOptions = {
+const light = {
     primary: {
         500: "linear-gradient(270deg, #c9d7de, transparent)"
     },
     secondary: {
         500: "#c9d7de",
         800: "rgb(127 137 142/15%)",
-        darkmode: function(active: boolean): string {
+        darkmode: function(active) {
             return active ?"#d8d4ab": this[500]
         },
     },
@@ -47,7 +45,7 @@ const light: ColorOptions = {
     },
     animation: '0.4s ease-in-out'
 }
-const dark: ColorOptions = {
+const dark = {
     primary: {
         500: "linear-gradient(270deg, #141c1f, black)"
     },
@@ -88,14 +86,12 @@ const dark: ColorOptions = {
     },
     animation: '0.4s ease-in-out'
 }
-// eslint-disable-next-line
 export default (darkmode) => {
-    const themeObj: ThemeOptions = {
+    return {
         colors: darkmode ? dark : light,
         border: {
             radius: "100px",
             radiusSlight: "25px",
         }
     }
-    return themeObj
 }

@@ -1,18 +1,63 @@
 import { useContext } from "react"
-import { ThemeContext } from "styled-components"
-import { Card } from "../../atoms/Card/Card"
-import { FontHighlight } from "../../atoms/FontStyles/FontHighlight"
-import { Fs } from "../../atoms/FontStyles/Hs"
-import { Input } from "../../atoms/Input/Input"
-import { BtnExample } from "../../molecules/examples/BtnExample"
-import { PaletteSample } from "../../molecules/examples/PaletteSample"
-import { Navbar } from "../../organisms/Navbar"
-import { ExpandableBox } from '../../molecules/ExpandableBox/ExpandableBox'
-import { NoteForm } from "../../molecules/NoteForm/NoteForm"
-import { StyledContainer } from "../../organisms/styles"
+import styled, { ThemeContext } from "styled-components"
+import { Card } from "../atoms/Card/Card"
+import { FontHighlight } from "../atoms/FontStyles/FontHighlight"
+import { Fs } from "../atoms/FontStyles/Hs"
+import { Input } from "../atoms/Input/Input"
+import { BtnExample } from "../molecules/examples/BtnExample"
+import { PaletteSample } from "../molecules/examples/PaletteSample"
+import { Navbar } from "../organisms/Navbar"
+import { ExpandableBox } from '../molecules/ExpandableBox/ExpandableBox'
+import { NoteForm } from "../molecules/NoteForm/NoteForm"
 
+const StyledContainer = styled.div`
+.sample-btn-wrapper  {
+    display: flex!important;
+    flex-direction: row;
+}    
+    
+    & > * {
+        display: inline-block;
+        display:flex;
+        align-items:flex-start;
+    }
+    .palette-sample {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 100px;
+        margin: 2.5rem;
+    }
+    .palette-sample-wrapper{
+        display: flex;
+        flex-wrap:wrap;
+    } 
+    & .fs-header {
+        display:flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    & .sample-btn-wrapper span {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .direct-container{
+        width: 11.1rem;
+        margin: 2rem;
+    }
+    .sample-btn-wrapper{
+        display:flex;
+        flex-wrap:wrap;
+    }
+    .btn-text{
+        margin-top:1rem;
+    }
+    
+`
 export const Examples = () => {
-    const theme: ThemeContext = useContext(ThemeContext)
+    const theme = useContext(ThemeContext)
     return (
         <>
             <Navbar />
